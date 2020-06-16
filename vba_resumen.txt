@@ -1,0 +1,23 @@
+Sub IDEA_resumen()
+    Dim IDEA As Object
+    Dim db As Object
+    Dim task As Object
+    Dim fields As Object
+    Set IDEA = CreateObject("Idea.IdeaClient")
+    Set db = IDEA.OpenDatabase("C:\Users\Intel\Documents\Mis documentos IDEA\Samples\Ejemplo-Detalle de ventas.imd")
+    Set task = db.Summarization
+    task.AddFieldToSummarize "NUM_VENDEDOR"
+    task.AddFieldToSummarize "COD_PROD"
+    task.AddFieldToSummarize "NUM_CLI"
+    task.AddFieldToTotal "NETO"
+    task.AddFieldToTotal "IMPUESTO"
+    task.AddFieldToTotal "TOTAL"
+    dbName = "Resumen000001.IMD"
+    task.OutputDBName = dbName
+    task.CreatePercentField = False
+    task.StatisticsToInclude = SM_SUM
+    task.PerformTask
+    Set task = Nothing
+    Set db = Nothing
+    Set IDEA = Nothing
+End Sub
