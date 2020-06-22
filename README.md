@@ -1,5 +1,5 @@
 # IDEA_Resumen
-Sobre IDEA versión 11 y el comando Resumen. IDEAScript y Python.
+Sobre IDEA versión 11 y el comando Resumen. IDEAScript, Python y VBA.
 
 Se presenta un ejemplo de ejecución del comando en formato IDEAScript y en Python. El archivo sobre el cual se ejecuta el script es una tabla de IDEA: Ejemplo-Detalle de ventas.IMD.
 
